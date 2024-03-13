@@ -44,12 +44,9 @@ namespace RectangleAssignment2
             }
             Rectangle rectangle = new Rectangle(length, width);
 
-            bool showMenuAgain = false;
             bool exit = false;
-            do
+            while(!exit)
             {
-                showMenuAgain = false;
-
                 int selection = ShowOptions();
 
                 switch (selection)
@@ -66,13 +63,9 @@ namespace RectangleAssignment2
                             rectangle.SetLength(int.Parse(tempLength));
                             Console.WriteLine($"Length changed to {tempLength} successfully.");
                         }
-                        else
-                        {
-                            showMenuAgain = true;
-                        }
                         break;
                     case 3:
-                        Console.WriteLine($"Length: {rectangle.GetWidth()}");
+                        Console.WriteLine($"Width: {rectangle.GetWidth()}");
                         break;
                     case 4:
                         Console.Write("Please enter new Width: ");
@@ -82,10 +75,6 @@ namespace RectangleAssignment2
                         {
                             rectangle.SetWidth(int.Parse(tempWidth));
                             Console.WriteLine($"Width changed to {tempWidth} successfully.");
-                        }
-                        else
-                        {
-                            showMenuAgain = true;
                         }
                         break;
                     case 5:
@@ -99,8 +88,7 @@ namespace RectangleAssignment2
                         exit = true;
                         break;
                 }
-
-            } while(showMenuAgain);
+            }
 
             if (!exit)
             {
