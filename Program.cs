@@ -10,7 +10,144 @@ namespace RectangleAssignment2
     {
         static void Main(string[] args)
         {
+            int length = 0;
+            int width = 0;
 
+            while (length == 0)
+            {
+                Console.Write("Please enter the length of the rectangle: ");
+                string tempLength = Console.ReadLine();
+                bool isLengthValid = CheckLength(tempLength);
+                if (!isLengthValid)
+                {
+                    length = 0;
+                }
+                else
+                {
+                    length = int.Parse(tempLength);
+                }
+            }
+            while (width == 0)
+            {
+                Console.Write("Please enter the width of the rectangle: ");
+                string tempWidth = Console.ReadLine();
+                bool isWidthValid = CheckWidth(tempWidth);
+                if (!isWidthValid)
+                {
+                    width = 0;
+                }
+                else
+                {
+                    width = int.Parse(tempWidth);
+                }
+
+            }
+            Rectangle rectangle = new Rectangle(length, width);
+
+            bool showMenuAgain = false;
+            bool exit = false;
+            do
+            {
+                showMenuAgain = false;
+
+                int selection = ShowOptions();
+
+                switch (selection)
+                {
+                    case 1:
+                        Console.WriteLine($"Length: {rectangle.GetLength()}");
+                        break;
+                    case 2:
+                        Console.Write("Please enter new Length: ");
+                        string tempLength = Console.ReadLine();
+                        bool isLengthValid = CheckLength(tempLength);
+                        if (isLengthValid)
+                        {
+                            rectangle.SetLength(int.Parse(tempLength));
+                            Console.WriteLine($"Length changed to {tempLength} successfully.");
+                        }
+                        else
+                        {
+                            showMenuAgain = true;
+                        }
+                        break;
+                    case 3:
+                        Console.WriteLine($"Length: {rectangle.GetWidth()}");
+                        break;
+                    case 4:
+                        Console.Write("Please enter new Width: ");
+                        string tempWidth = Console.ReadLine();
+                        bool isWidthValid = CheckWidth(tempWidth);
+                        if (isWidthValid)
+                        {
+                            rectangle.SetWidth(int.Parse(tempWidth));
+                            Console.WriteLine($"Width changed to {tempWidth} successfully.");
+                        }
+                        else
+                        {
+                            showMenuAgain = true;
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine($"Perimeter: {rectangle.GetPerimeter()}");
+                        break;
+                    case 6:
+                        Console.WriteLine($"Area: {rectangle.GetArea()}");
+                        break;
+                    case 7:
+                        Console.WriteLine("\nThank you for your time 😊");
+                        exit = true;
+                        break;
+                }
+
+            } while(showMenuAgain);
+
+            if (!exit)
+            {
+                Console.ReadLine();
+            } 
+        }
+
+        public static bool CheckLength(string tempLength)
+        {
+            if (!int.TryParse(tempLength, out int length) || length <= 0)
+            {
+                Console.WriteLine("\nError, Length must be a valid integer.\n");
+                return false;
+            }
+            return true;
+        }
+        public static bool CheckWidth(string tempWidth)
+        {
+            if (!int.TryParse(tempWidth, out int width) || width <= 0)
+            {
+                Console.WriteLine("\nError, Width must be a valid integer.\n");
+                return false;
+            }
+            return true;
+        }
+
+        public static int ShowOptions()
+        {
+            int selection = 0;
+            while (selection == 0)
+            {
+                Console.WriteLine("\nSelect one option:\n");
+                Console.WriteLine("1. Get Rectangle Length");
+                Console.WriteLine("2. Change Rectangle Length");
+                Console.WriteLine("3. Get Rectangle Width");
+                Console.WriteLine("4. Change Rectangle Width");
+                Console.WriteLine("5. Get Rectangle Perimeter");
+                Console.WriteLine("6. Get Rectangle Area");
+                Console.WriteLine("7. Exit");
+                string tempSelection = Console.ReadLine();
+                if (!int.TryParse(tempSelection, out selection) || selection <= 0 || selection > 7)
+                {
+                    Console.WriteLine("\nError, Invalid selection.");
+                    selection = 0;
+                }
+            }
+            return selection;
         }
     }
 }

@@ -1,0 +1,7 @@
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\bin\Debug\RectangleAssignment2.exe.config
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\bin\Debug\RectangleAssignment2.exe
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\bin\Debug\RectangleAssignment2.pdb
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\obj\Debug\RectangleAssignment2.csproj.AssemblyReference.cache
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\obj\Debug\RectangleAssignment2.csproj.CoreCompileInputs.cache
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\obj\Debug\RectangleAssignment2.exe
+C:\Users\asing\OneDrive\Desktop\SQA-assignment-2\RectangleAssignment2\obj\Debug\RectangleAssignment2.pdb
