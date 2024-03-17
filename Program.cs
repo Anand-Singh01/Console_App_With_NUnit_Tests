@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RectangleAssignment2
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -52,7 +52,7 @@ namespace RectangleAssignment2
                 switch (selection)
                 {
                     case 1:
-                        Console.WriteLine($"Length: {rectangle.GetLength()}");
+                        Console.WriteLine($"\nLength: {rectangle.GetLength()}");
                         break;
                     case 2:
                         Console.Write("Please enter new Length: ");
@@ -61,11 +61,11 @@ namespace RectangleAssignment2
                         if (isLengthValid)
                         {
                             rectangle.SetLength(int.Parse(tempLength));
-                            Console.WriteLine($"Length changed to {tempLength} successfully.");
+                            Console.WriteLine($"\nLength changed to {tempLength} successfully.");
                         }
                         break;
                     case 3:
-                        Console.WriteLine($"Width: {rectangle.GetWidth()}");
+                        Console.WriteLine($"\nWidth: {rectangle.GetWidth()}");
                         break;
                     case 4:
                         Console.Write("Please enter new Width: ");
@@ -74,17 +74,16 @@ namespace RectangleAssignment2
                         if (isWidthValid)
                         {
                             rectangle.SetWidth(int.Parse(tempWidth));
-                            Console.WriteLine($"Width changed to {tempWidth} successfully.");
+                            Console.WriteLine($"\nWidth changed to {tempWidth} successfully.");
                         }
                         break;
                     case 5:
-                        Console.WriteLine($"Perimeter: {rectangle.GetPerimeter()}");
+                        Console.WriteLine($"\nPerimeter: {rectangle.GetPerimeter()}");
                         break;
                     case 6:
-                        Console.WriteLine($"Area: {rectangle.GetArea()}");
+                        Console.WriteLine($"\nArea: {rectangle.GetArea()}");
                         break;
                     case 7:
-                        Console.WriteLine("\nThank you for your time 😊");
                         exit = true;
                         break;
                 }
@@ -105,6 +104,7 @@ namespace RectangleAssignment2
             }
             return true;
         }
+
         public static bool CheckWidth(string tempWidth)
         {
             if (!int.TryParse(tempWidth, out int width) || width <= 0)

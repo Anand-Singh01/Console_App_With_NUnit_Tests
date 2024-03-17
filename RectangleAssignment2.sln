@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RectangleAssignment2", "RectangleAssignment2.csproj", "{2369FA55-4441-49A3-A91E-6526CECE103A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2.Tests", "..\Assignment2.Tests\Assignment2.Tests.csproj", "{DC6EA772-0C18-4823-9DE5-AEC7990AD86F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2369FA55-4441-49A3-A91E-6526CECE103A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2369FA55-4441-49A3-A91E-6526CECE103A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2369FA55-4441-49A3-A91E-6526CECE103A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6EA772-0C18-4823-9DE5-AEC7990AD86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6EA772-0C18-4823-9DE5-AEC7990AD86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6EA772-0C18-4823-9DE5-AEC7990AD86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6EA772-0C18-4823-9DE5-AEC7990AD86F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
